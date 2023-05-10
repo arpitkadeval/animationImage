@@ -1,0 +1,60 @@
+.background-remover-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.background-remover-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-remover-image {
+  max-width: 100%;
+  max-height: 400px;
+  margin: 10px;
+}
+.background-remover-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.background-remover-button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.background-remover-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.background-remover-button:hover {
+  color: #e8e8e8;
+}
+
+.background-remover-button:hover::before {
+  width: 100%;
+}
